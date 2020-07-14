@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,800;1,400&display=swap');
+
+:root {
+    --brand-color: rgb(32, 154, 46);
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* HEADER
+------------------------------------------------------------------------ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 60px 0 60px;
+    box-sizing: border-box;
+}
+
+.header-logo img {
+    width: 200px;
+}
+
+nav {
+    padding-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 25px;
+    transition: .5s;
+}
+
+nav a:hover {
+    color: var(--brand-color);
+}
+
+.nav-icon {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.nav-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: black;
+}
+
+.nav-icon span:nth-child(2) {
+    margin: 5px 0;
+}
+
+.header-social-icon {
+    display: none;
+}
+
+
+/* SLIDER
+------------------------------------------------------------------------ */
+
+.slideshow img {
+    width: 100%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* MEDIA QUERY
+------------------------------------------------------------------------ */
+
+@media screen and (max-width: 800px) {
+
+    .nav-icon {
+        display: block;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.8);
+        padding-top: 15vh;
+    }
+
+    nav {
+        margin: 10vh 0;
+    }
+
+    nav a {
+        display: block;
+        font-size: 25px;
+        margin: 30px 0;
+    }
+
+    .header-social-icon {
+        display: block;
+        font-size: 30px;
+        transition: .5s;
+    }
+
+    .header-social-icon i {
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .header-social-icon i:hover {
+        color: var(--brand-color);
+    }
+
+    .slider-img {
+        position: relative;
+    }
+
+    .slider-img img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: auto;
+    }
+}
