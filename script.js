@@ -1,7 +1,13 @@
+/* MOBILE MENU TOGGLE
+------------------------------------------------------------------------ */
+
 $(".nav-icon").click(() => {
     $("header").slideToggle();
 });
 
+
+/* SLIDER
+------------------------------------------------------------------------ */
 
 let imagesIndex = 0;
 let i = 0;
@@ -20,7 +26,7 @@ let slider = () => {
     images[imagesIndex].style.display = 'block';
     imagesIndex++;
 
-    setTimeout(slider, 3000);
+    setTimeout(slider, 5000);
 }
 
 slider();
