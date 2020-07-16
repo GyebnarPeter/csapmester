@@ -1,136 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 :root {
-    --brand-color: #fde231;
+    --brand-color: orange;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
     margin: 0;
+    font-family: 'Rajdhani', sans-serif;
 }
 
-
-/* HEADER
------------------------------------------------------------------------- */
-
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+    height: 60px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 15px 60px 0 60px;
-    box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.8);
+    align-items: center;
+    padding: 0 50px;
 }
 
 .header-logo img {
-    width: 200px;
-}
-
-nav {
-    padding-top: 8px;
+    height: 50px;
+    margin-top: 10px;
 }
 
 nav a {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
-    margin-left: 25px;
-    transition: .5s;
+    font-weight: 700;
+    margin-left: 30px;
+    transition: .4s;
 }
 
 nav a:hover {
     color: var(--brand-color);
 }
 
-.nav-icon {
-    display: none;
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.nav-icon span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background: black;
-}
-
-.nav-icon span:nth-child(2) {
-    margin: 5px 0;
-}
-
-.header-social-icon {
-    display: none;
-}
-
 
 /* SLIDER
 ------------------------------------------------------------------------ */
 
-.slideshow {
-    position: relative;
-}
-
-.slideshow img {
+.slider {
     width: 100%;
+    height: 100vh;
 }
 
-.slider-text {
-    position: absolute;
-    top: 250px;
-    left: 10vh;
-    font-size: 30px;
+.slide-1 {
+    background: url("./img/slider-tap-1.jpg");
 }
 
-.slider-text h1 {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: var(--brand-color);
-    text-shadow: 1px 1px 3px black;
+.slide-2 {
+    background: url("./img/slider-tap-2.jpg");
 }
 
-.slider-text span {
-    display: block;
-    text-transform: lowercase;
-    font-weight: 400;
-    letter-spacing: 1px;
-    font-size: 30px;
-    color: black;
-    text-shadow: none;
+.slide-3 {
+    background: url("./img/slider-tap-3.jpg");
 }
 
-.slider-text a {
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 10px;
-    color: var(--brand-color);
-    border: 2px solid var(--brand-color);
-    transition: .5s;
+.slide-page {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
-.slider-text a:hover {
-    background: var(--brand-color);
-    color: black;
+.slide-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .fade {
     animation-name: fade;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
 }
 
 @keyframes fade {
@@ -143,131 +90,234 @@ nav a:hover {
 }
 
 
-/* MAIN
+/* MAIN CONTENT
 ------------------------------------------------------------------------ */
 
 .about-us {
     width: 100%;
-    max-width: 1920px;
-    margin: auto;
-    padding-top: 50px;
+    margin: 80px auto;
+    max-width: 1200px;
     display: flex;
-    color: #151515;
 }
 
 .about-us-left-box {
     flex-grow: 1;
     flex-basis: 0;
-    padding: 0 5%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    padding: 0 5vh;
 }
 
 .about-us-left-box h5 {
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .about-us-left-box h1 {
-    font-weight: 400;
-    font-size: 40px;
+    font-size: 30px;
+    color: #494949;
 }
 
-.about-us-left-box h1 span {
+.about-us-left-box span {
     color: var(--brand-color);
 }
 
 .about-us-right-box {
     flex-grow: 1;
     flex-basis: 0;
-    padding: 0 5%;
-    line-height: 1.8;
-    letter-spacing: 1px;
-    font-size: 14px;
+    padding: 0 5vh;
+    line-height: 1.5;
+}
+
+.services {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+.services h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #494949;
+    margin: 80px 0;
+}
+
+.services h2 {
+    font-size: 30px;
+    color: #494949;
+}
+
+.services h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.service-box {
+    display: flex;
+    margin-bottom: 100px;
+    text-align: right;
+}
+
+.services .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.services .right-box {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.services-icon {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding: 50px;
+    box-shadow: 0px 0px 39px -13px rgba(0,0,0,0.65);
+}
+
+.services img {
+    width: 200px;
+    height: 200px;
+}
+
+.services span {
+    color: var(--brand-color);
+}
+
+.toilette, .soda {
+    flex-direction: row-reverse;
+    text-align: left;
 }
 
 
-/* MEDIA QUERY
+/* CONTACT
 ------------------------------------------------------------------------ */
 
-
-@media screen and (max-width: 1024px) {
-    .about-us {
-        display: block;
-        text-align: center;
-    }
+.contact {
+    background: #231f20;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
 }
+
+.contact h1 {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    color: var(--brand-color);
+}
+
+.contact h4 {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    color: #888888;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+    background: #231f20;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    margin-bottom: 30px;
+    padding: 5px;
+    color: #888888;
+}
+
+.contact form button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    width: 150px;
+    margin: 0 auto;
+    transition: .5s;
+}
+
+.form-btn:hover {
+    background: var(--brand-color);
+    color: black;
+}
+
+.contact form textarea {
+    height: 150px;
+    font-size: 20px;
+}
+
+.contact i {
+    color: var(--brand-color);
+    font-size: 30px;
+    margin-top: 50px;
+    transition: .5s;
+}
+
+.contact i:hover {
+    color: white;
+}
+
 
 @media screen and (max-width: 800px) {
 
-    .nav-icon {
-        display: block;
-    }
-
     header {
-        flex-direction: column;
-        text-align: center;
-        display: none;
-        width: 100vw;
-        height: 100vh;
-        padding-top: 15vh;
+        justify-content: center;
+        padding: 0;
     }
 
-    nav {
-        margin: 10vh 0;
+    .header-logo {
+        display: none;
     }
 
     nav a {
-        display: block;
-        font-size: 25px;
-        margin: 30px 0;
+        font-size: 14px;
+        margin: 0;
     }
 
-    .header-social-icon {
-        display: block;
-        font-size: 30px;
-        transition: .5s;
+    nav a:nth-child(2) {
+        margin: 0 15px;
     }
 
-    .header-social-icon i {
-        cursor: pointer;
-        transition: .5s;
-    }
-
-    .header-social-icon i:hover {
-        color: var(--brand-color);
-    }
-
-    .slider-img img {
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: auto;
-    }
-
-    .slider-text h1 {
-        font-size: 40px;
-    }
-
-    .slider-text h1 span {
-        font-size: 20px;
-    }
-
-    .slider-text a {
-        font-size: 12px;
-        padding: 5px;
+    .slide-page {
+        background-position: right;
     }
 
     .about-us {
-        padding-top: 110vh;
+        display: block;
+        text-align: center;
+        padding: 0 3vh;
+        margin: 30px 0;
     }
-}
 
-@media screen and (max-width: 440px) {
+    .service-box {
+        display: block;
+        text-align: center;
+        padding: 0 10px;
+    }
 
-    .slider-img img {
-        position: relative;
+    .services-icon {
+        margin-top: 50px;
+    }
+
+    .services img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .contact form {
+        width: 100%;
+        padding: 0 20px;
     }
 }
