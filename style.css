@@ -50,21 +50,35 @@ nav a:hover {
 }
 
 .slide-1 {
-    background: url("./img/slider-tap-1.jpg");
+    background: url("./img/csap.jpg");
 }
 
 .slide-2 {
-    background: url("./img/slider-tap-2.jpg");
+    background: url("./img/szoda.jpg");
 }
 
 .slide-3 {
-    background: url("./img/slider-tap-3.jpg");
+    background: url("./img/viztisztitas.jpg");
 }
 
 .slide-page {
     background-size: cover;
+    background-attachment: fixed;
     width: 100%;
     height: 100%;
+}
+
+.slide-page h1 {
+    color: var(--brand-color);
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.slide-page h3 {
+    margin: 0;
+    font-weight: 400;
 }
 
 .slide-text {
@@ -73,6 +87,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-left: 10vh;
 }
 
 .fade {
@@ -206,7 +221,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 50px 0;
+    padding-top: 50px;
 }
 
 .contact h1 {
@@ -242,7 +257,7 @@ nav a:hover {
 .contact form button {
     border: none;
     cursor: pointer;
-    color: white;
+    color: var(--brand-color);
     width: 150px;
     margin: 0 auto;
     transition: .5s;
@@ -250,7 +265,7 @@ nav a:hover {
 
 .form-btn:hover {
     background: var(--brand-color);
-    color: black;
+    color: white;
 }
 
 .contact form textarea {
@@ -259,14 +274,56 @@ nav a:hover {
 }
 
 .contact i {
-    color: var(--brand-color);
+    color: white;
     font-size: 30px;
     margin-top: 50px;
+    margin-bottom: 50px;
     transition: .5s;
 }
 
 .contact i:hover {
+    color: var(--brand-color);
+}
+
+.contact-data {
+    width: 100%;
+    background: white;
+    color: black;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact-data span {
+    display: block;;
+}
+
+.contact-data h2 {
+    text-transform: uppercase;
+    color: var(--brand-color);
+    padding: 40px 0;
+}
+
+footer {
+    width: 100%;
     color: white;
+    background: #231f20;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+footer a:hover {
+    color: var(--brand-color);
+}
+
+footer a span {
+    font-weight: 700;
 }
 
 
@@ -291,7 +348,11 @@ nav a:hover {
     }
 
     .slide-page {
-        background-position: right;
+        background-position: top right;
+    }
+
+    .slide-page h1 {
+        font-size: 30px;
     }
 
     .about-us {
